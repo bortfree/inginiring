@@ -1,0 +1,411 @@
+@import "bourbon/bourbon"
+@import "../libs/retina/retina"
+@import "../sprites/sprite"
+
+$blue: #044c86
+
+
+//Пример синтаксиса миксина Retina
+//	+at2x("../img/logo", png, 301px, 47px)
+// размер изображения *2 название *@2x.*
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: "clearSansRegular", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 1200px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	color: #333
+
+.container
+	width: 1030px !important
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: #014478
+
+h1
+	font-family: "BebasNeueCyrillic", sans-serif
+	font-size: 72px
+	font-weight: normal
+	text-transform: uppercase
+
+h2
+	font-family: "BebasNeueCyrillic", sans-serif
+	font-size: 48px
+	font-weight: normal
+	text-transform: uppercase
+
+a
+	&:hover, &:focus, &:active
+		color: #fff
+		outline: none
+
+section
+	padding: 50px 0
+	text-align: center
+	h2
+		position: relative
+		&::after
+			position: absolute
+			content: ''
+			height: 1px
+			width: 140px
+			background-color: #014478
+			bottom: 11px
+			left: 50%
+			margin-left: -70px
+		&::before
+			position: absolute
+			content: ''
+			height: 1px
+			width: 60px
+			background-color: #014478
+			bottom: 7px
+			left: 50%
+			margin-left: -30px
+
+.color
+	color: #fff
+
+.hidden
+	display: none
+
+.ic
+	display: inline-block
+	position: relative
+	
+.ic_arrows
+	@include sprite($ic_arrows)
+.ic_calc
+	@include sprite($ic_calc)
+.ic_clock
+	@include sprite($ic_clock)
+.ic_clock1
+	@include sprite($ic_clock1)
+.ic_communic
+	@include sprite($ic_communic)
+.ic_home
+	@include sprite($ic_home)
+.ic_money
+	@include sprite($ic_money)
+.ic_money1
+	@include sprite($ic_money1)
+.ic_pen
+	@include sprite($ic_pen)
+.ic_people
+	@include sprite($ic_people)
+.ic_people1
+	@include sprite($ic_people1)
+.ic_phone
+	@include sprite($ic_phone)
+.ic_school
+	@include sprite($ic_school)
+.ic_search
+	@include sprite($ic_search)
+.ic_sertif
+	@include sprite($ic_sertif)
+.ic_sity
+	@include sprite($ic_sity)
+.ic_tool
+	@include sprite($ic_tool)
+.ic_window
+	@include sprite($ic_window)
+
+.my_head
+	background-image: url(../img/bg_head.jpg)
+	background-size: cover
+	background-position: top center
+	min-height: 842px
+	position: relative
+	color: #fff
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(4, 76, 134, 0.75)
+		z-index: 1
+
+.line_menu
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+	position: relative
+	z-index: 2
+	text-align: center
+	height: 80px
+	.logo_wrap
+		padding: 7px 0 12px
+		display: inline-block
+		float: left
+	.menu
+		display: inline-block
+		height: 80px
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				float: left
+				&:last-child
+					a
+						border-right: 1px solid rgba(255, 255, 255, 0.5)
+				a
+					font-family: "RobotoBlack", sans-serif
+					font-size: 12px
+					text-transform: uppercase
+					color: #fff
+					height: 100%
+					display: inline-block
+					line-height: 80px
+					border-left: 1px solid rgba(255, 255, 255, 0.5)
+					padding: 0 13px
+	.contact_wrap
+		float: right
+		height: 80px
+		.contact_descr, .contact_img
+			display: inline-block
+		.contact_descr
+			text-align: right
+			margin-right: 16px
+			position: relative
+			top: 14px
+			.tel
+				display: block
+				text-transform: uppercase
+				font-size: 24px
+				line-height: 28px
+			.email
+				display: block
+				position: relative
+				top: -4px
+		.contact_img
+			width: 60px
+			height: 100%
+			line-height: 80px
+			position: relative
+			background-color: #9b0000
+			background-image: linear-gradient(to top, #9b0000 0%, #d10002 100%)
+			transition: all .3s ease
+			&:hover
+				background-image: linear-gradient(to top, #9b0000 0%, #f30002 100%)
+			.ic_phone
+				position: relative
+				top: 11px
+
+.home_sect
+	position: relative
+	z-index: 2
+	text-align: center
+	.title_wr
+		h1
+			margin-bottom: 7px
+			margin-top: 57px
+			line-height: 80px
+		p
+			margin: 0
+			font-family: "RobotoBlack", sans-serif
+			font-size: 24px
+			line-height: 30px
+	
+.items_home
+	text-align: left
+	margin-top: 35px
+	.item_home
+		margin-bottom: 25px
+		.ic_money
+			top: 5px
+			margin-right: 5px
+		p
+			display: inline-block
+			font-size: 18px
+			font-family: "clearSansBold", sans-serif
+			margin: 0
+			line-height: 23px
+			width: 455px
+
+.form_wrap
+	float: right
+	margin-top: 34px
+
+.top_form
+	width: 330px
+	font-family: "clearSansBold", sans-serif
+	background-image: linear-gradient(to top, #014478 0%, #035ca1 100%)
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+	padding: 0 25px 30px
+	h3
+		margin: 0
+		font-weight: normal
+		padding-top: 8px
+		font-size: 24px
+	p
+		margin: 0
+		margin-top: 3px
+		margin-bottom: 13px
+		span
+			color: #ff0002
+			text-transform: uppercase
+	input, .button
+		width: 100%
+		border: none
+	input
+		background-color: #ededed
+		border: 1px solid #cfcfcf
+		border-radius: 5px
+		box-shadow: inset 2px 0.1px 3px rgba(0, 0, 0, 0.25)
+		text-transform: uppercase
+		padding: 7px 20px
+		margin-bottom: 11px
+		&::-webkit-input-placeholder
+			color: #014478
+		&::-moz-placeholder 
+			color: #014478
+		&:-ms-input-placeholder
+			color: #014478
+		&:-moz-placeholder
+			color: #014478
+	.but_wr
+		margin-top: 10px
+
+.button
+	background-image: linear-gradient(to top, #a00000 0%, #cf0002 100%)
+	border-radius: 5px
+	box-shadow: 2px 0.1px 3px rgba(0, 0, 0, 0.15)
+	padding: 11px 30px
+	font-family: "RobotoBlack", sans-serif
+	text-transform: uppercase
+	transition: all .3s ease
+	&:hover
+		background-image: linear-gradient(to top, #a00000 0%, #e10104 100%)
+
+.descr_home_wrap
+	background-image: url(../img/bg_head_item.jpg)
+	width: 100%
+	height: 200px
+	background-size: cover
+	background-position: center
+	text-align: left
+	position: relative
+	top: 41px
+	.descr_home
+		font-size: 12px
+		font-family: "RobotoRegular", sans-serif
+		vertical-align: bottom
+		padding-left: 15px
+		h4
+			font-family: "RobotoBlack", sans-serif
+			font-size: 14px
+			font-weight: normal
+			margin-top: 122px
+			margin-bottom: 3px
+		p
+			margin: 0
+	.last
+		padding-left: 0
+
+.service
+	margin-top: 49px
+	padding: 50px 0 23px;
+
+.service_items_wrap
+	margin-top: 14px
+
+.service_item
+	width: 245px
+	display: inline-block
+	vertical-align: top
+	margin-bottom: 24px
+	&__img
+		height: 65px
+		.ic
+			line-height: 65px
+	h3
+		font-family: "clearSansBold", sans-serif
+		text-transform: uppercase
+		color: $blue
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+	ul
+		text-align: left
+		padding-left: 20px
+		margin: 0
+		font-size: 16px
+		list-style-type: none
+		li
+			line-height: 21px
+			margin-bottom: 9px
+			display: block
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 5px
+				height: 5px
+				border-radius: 10em
+				background-color: #333
+				top: 8px
+				left: -13px
+
+.postscr
+	font-size: 18px
+	color: #cf0002
+	font-family: "clearSansBold", sans-serif
+	line-height: 24px
+
+.s_form
+	background-image: url(../img/bg_form.jpg)
+	background-size: cover
+	background-position: center
+	min-height: 250px
+	position: relative
+	text-align: center
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(4, 76, 134, 0.75)
+		z-index: 1
+
+.form_inline
+	position: relative
+	z-index: 2
+	h3
+		font-family: "RobotoBlack", sans-serif
+		font-size: 24px
+		padding-top: 20px
