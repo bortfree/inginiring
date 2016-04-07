@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
 	<link rel="stylesheet" type="text/css" href="libs/magnific-popup/magnific-popup.css" />
 	<link rel="stylesheet" href="libs/animate/animate.css">
+	<link rel="stylesheet" href="libs/headhesive/headhesive.css">
 
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -29,7 +30,7 @@
 
 <body>
 
-	<header class="my_head">
+	<header class="banner">
 
 		<div class="line_menu">
 			<div class="container">
@@ -42,11 +43,11 @@
 
 						<nav class="menu">
 							<ul>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Оборудование</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Схема работы</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#service">Услуги</a></li>
+								<li><a href="#machine">Оборудование</a></li>
+								<li><a href="#advantages">Преимущества</a></li>
+								<li><a href="#step">Схема работы</a></li>
+								<li><a href="#map">Контакты</a></li>
 							</ul>
 						</nav>
 
@@ -55,7 +56,7 @@
 								<span class="tel">+7(812) 309 02 40</span>
 								<span class="email">universaleng@mail.ru</span>
 							</div>
-							<a  href="#" class="contact_img">
+							<a  href="#form_pop" class="contact_img popup">
 								<i class="ic ic_phone"></i>
 							</a>
 						</div>
@@ -64,13 +65,17 @@
 				</div>
 			</div>			
 		</div>
+	</header>
 
+	<section class="my_head">
 		<div class="home_sect">
+
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="title_wr">
 							<h1>Обследование зданий и сооружений</h1>
+							<a id="showHere"></a>
 							<p>С экономией вашего бюджета от 15-30%, выезд специалиста на осмотр объекта в день обращения</p>
 						</div>
 					</div>
@@ -111,11 +116,16 @@
 								<h3>ЗАПОЛНИТЕ ФОРМУ</h3>
 								<p>и получите консультацию <span>бесплатно</span></p>
 								<input type="text" required name="name" placeholder="Имя">
-								<input type="tel" required name="phone" placeholder="Телефон">
+								<input type="tel" id="phone" required name="phone" placeholder="Телефон">
 								<input type="email" required name="email" placeholder="Email">
 								<div class="but_wr">
 									<button class="button">получить консультацию</button>
 								</div>
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="Универсал Инжиниринг">
+								<input type="hidden" name="admin_email" value="ebortnikov@mail.ru">
+								<input type="hidden" name="form_subject" value='Форма "Получить консультацию" с первого экрана'>
+								<!-- END Hidden Required Fields -->
 							</form>
 
 						</div>
@@ -161,9 +171,9 @@
 			</div>
 		</div>
 
-	</header>
+	</section>
 
-	<section class="service">
+	<section class="service" id="service">
 		<h2>Наши услуги</h2>
 
 		<div class="container">
@@ -282,15 +292,483 @@
 
 	<div class="s_form color">
 		<form id="form1" class="form_inline">
-			<h3>ЗАПОЛНИТЕ ФОРМУ</h3>
-			<p>и получите консультацию <span>бесплатно</span></p>
+			<h3>ОСТАВЬТЕ ЗАЯВКУ МЫ ПРОВЕДЕМ ОСМОТР ВАШЕГО ОБЪЕКТА</h3>
+			<p>И оценим его техническое состояние <span>бесплатно</span></p>
 			<input type="text" required name="name" placeholder="Имя">
-			<input type="tel" required name="phone" placeholder="Телефон">
-			<button class="button">получить консультацию</button>
+			<input type="tel" id="phone2" required name="phone" placeholder="Телефон">
+			<button class="button">оставить заявку</button>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Универсал Инжиниринг">
+			<input type="hidden" name="admin_email" value="ebortnikov@mail.ru">
+			<input type="hidden" name="form_subject" value='Заявка на осмотр объекта'>
+			<!-- END Hidden Required Fields -->
 		</form>
 	</div>
-	
-	<div class="hidden"></div>
+
+	<section class="machine clearfix" id="machine">
+		<h2>Оборудование в арсенале нашей организации</h2>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 clearpad">
+					
+					<div class="machine_items_wrap slider">
+
+						<!-- Slide 1 -->
+
+						<div class="machine_item slide">
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/SET510L.jpg" alt="SET510L">
+								</div>
+								<h5>Тахеометр</h5>
+								<span>Sokkia SET510L</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/B30-35.jpg" alt="B30-35">
+								</div>
+								<h5>Невилир</h5>
+								<span>Sokkia B30-35</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/mg403.jpg" alt="mg403">
+								</div>
+								<h5>Измеритель прочности бетона</h5>
+								<span>ИПС-МГ4.03</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/pulsar21.jpg" alt="pulsar21">
+								</div>
+								<h5>Измеритель прочности однородности и глубины трещин</h5>
+								<span>ПУЛЬСАР 2.1</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/mg401.jpg" alt="mg401">
+								</div>
+								<h5>Измеритель толщины защитного слоя бетона</h5>
+								<span>ИПА-МГ4.01</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/SchmidtN.jpg" alt="SchmidtN">
+								</div>
+								<h5>Механический измеритель прочности бетона Original</h5>
+								<span>Original Schmidt N</span>
+							</div>
+
+						</div>
+
+						<!-- Slide 1 End -->
+
+						<!-- Slide 2 -->
+
+						<div class="machine_item slide">
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/testo8701.jpg" alt="testo8701">
+								</div>
+								<h5>Тепловизор</h5>
+								<span>Testo 870-1</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/mt2007.jpg" alt="mt2007">
+								</div>
+								<h5>Толщинометр покрытий</h5>
+								<span>МТ-2007 (МТ-М)</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/tt100.jpg" alt="tt100">
+								</div>
+								<h5>Ультразвуковой толщинометр</h5>
+								<span>TT-100</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/ca300.jpg" alt="ca300">
+								</div>
+								<h5>Эндоскоп</h5>
+								<span>Ridgid Micro CA-300</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/condor.jpg" alt="condor">
+								</div>
+								<h5>Рейка для определения параметров профиля дорог</h5>
+								<span>РДУ-КОНДОР</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/GN592600.jpg" alt="GN592600">
+								</div>
+								<h5>Дорожное колесо</h5>
+								<span>GN592600</span>
+							</div>
+
+						</div>
+
+						<!-- Slide 2 End -->
+
+						<!-- Slide 3 -->
+
+						<div class="machine_item slide">
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/glm250.jpg" alt="glm250">
+								</div>
+								<h5>Лазерный измеритель длинны</h5>
+								<span>Bosch GLM 250 VF Professional</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/testo104.jpg" alt="testo104">
+								</div>
+								<h5>Термометр цифровой</h5>
+								<span>Testo 104-IR</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/testo540.jpg" alt="testo540">
+								</div>
+								<h5>Люксметр</h5>
+								<span>Testo 540</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/testo606.jpg" alt="testo606">
+								</div>
+								<h5>Универсальный влагомер</h5>
+								<span>Testo 606-2</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/testo815.jpg" alt="testo815">
+								</div>
+								<h5>Измеритель уровня шума</h5>
+								<span>Testo 815</span>
+							</div>
+
+							<div class="machine_item_element">
+								<div class="machine_item_element__img">
+									<img src="img/image/rulet.jpg" alt="rulet">
+								</div>
+								<h5>Рулетка 50 метров</h5>
+							</div>
+
+						</div>
+
+						<!-- Slide 3 End -->
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="advantages" id="advantages">
+		<h2>Наши преимущества</h2>
+		<p class="title_descr">Шесть <span>НАСТОЯЩИХ</span> причин обратиться в нашу организацию</p>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">
+					
+					<div class="items_adv">
+						
+						<div class="item_adv">
+							<div class="item_adv__img">
+								<i class="ic ic_people1"></i>
+							</div>
+							<div class="item_adv__descr">
+								<h4>Молодость организации</h4>
+								<p>Молодость не порок, а горящие глаза, скорость и стремление к высоким результатам. Нам жизненно необходимы положительные отзывы о нашей работе, мы не имеем возможности работать плохо.</p>
+							</div>
+						</div>
+
+						<div class="item_adv">
+							<div class="item_adv__img">
+								<i class="ic ic_sertif"></i>
+							</div>
+							<div class="item_adv__descr">
+								<h4>Профильное образование</h4>
+								<p>Технические специалисты и руководители имеют высшее инженерное (Строительное) образование. </p>
+							</div>
+						</div>
+
+						<div class="item_adv">
+							<div class="item_adv__img">
+								<i class="ic ic_pen"></i>
+							</div>
+							<div class="item_adv__descr">
+								<h4>Опыт специалистов</h4>
+								<p>Технические специалисты и руководители более 10 лет работают в строительной отрасли и принимали участие в обследовании, проектировании и строительстве десятков объектов.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="col-xs-6">
+					
+					<div class="items_adv right_adv">
+						
+						<div class="item_adv">
+							<div class="item_adv__img">
+								<i class="ic ic_money1"></i>
+							</div>
+							<div class="item_adv__descr">
+								<h4>Стоимость работ ниже средне рыночной на 15-30%</h4>
+								<p>На начальном этапе развития нашей компании финансовый результат для нас на втором месте. На первом месте завоевание постоянных партнеров и заказчиков.</p>
+							</div>
+						</div>
+
+						<div class="item_adv">
+							<div class="item_adv__img">
+								<i class="ic ic_clock1"></i>
+							</div>
+							<div class="item_adv__descr">
+								<h4>Скорость работы быстрее всредем на 30%</h4>
+								<p>Для реализации работ в нужные вам сроки мы готовы работать по 12-15 часов в сутки, в том числе в выходные и праздники.</p>
+							</div>
+						</div>
+
+						<div class="item_adv">
+							<div class="item_adv__img">
+								<i class="ic ic_people"></i>
+							</div>
+							<div class="item_adv__descr">
+								<h4>Терпеливая работа с заказчиком</h4>
+								<p>Мы готовы чутко реогировать на просьбы и пожелания Заказчика. Мы понимаем, что это заказчик платит нам деньги, а не мы ему.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<div class="s_form color">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<form id="form2" class="form_inline">
+						<h3>ОСТАВЬТЕ ЗАЯВКУ И В ТЕЧЕНИИ ОДНОГО ДНЯ МЫ ПРОВЕДЕМ ОСМОТР ВАШЕГО ОБЪЕКТА И ПОДГОТОВИМ ПРОГРАММУ ОБСЛЕДОВАНИЯ <span>БЕСПЛАТНО!</span></h3>
+						<input type="text" required name="name" placeholder="Имя">
+						<input type="tel" id="phone3" required name="phone" placeholder="Телефон">
+						<button class="button">оставить заявку</button>
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="Универсал Инжиниринг">
+						<input type="hidden" name="admin_email" value="ebortnikov@mail.ru">
+						<input type="hidden" name="form_subject" value='Заявка на осмотр объекта'>
+						<!-- END Hidden Required Fields -->
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="step" id="step">
+		<h2>Схема и этапы нашей работы</h2>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 step_clear_left">
+					
+					<div class="step_items_left">
+
+						<div class="step_item left">
+							<h3>Ваш звонок или заявка</h3>
+							<p>Вы оставляете заявку или звоните нам по телефону +7(812) 309-02-40</p>
+							<div class="number">1</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Визуальное обследование Вашего объекта</h3>
+							<p>Если объект находится в пределах Санкт-Петербурга, мы в течении нескольких часов проведем предварительное обследование вашего объекта</p>
+							<div class="number">3</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Подготовка программы обследования</h3>
+							<p>На основании анализа собранных исходных данный составляется программа обследования, в которой будут указаны состав работ и список приборов которые будут использаваны в работе</p>
+							<div class="number">5</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Заключение договора подряда</h3>
+							<p>Для нас важно, чтобы вы были уверены в получении запланированного результата в запланированные сроки. Поэтому в качестве приложений к договору будут приложены календарный график производства работ и техническое задание с полным составом работ</p>
+							<div class="number">7</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Подготовка отчета по результатам обследования</h3>
+							<p>Написание отчета производится в соответствии с утвержденным графиком производства работ</p>
+							<div class="number">9</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Приемка работ</h3>
+							<p>Вы проверяете результат работ и производите оплату в соответствии с условиями заключенного договора</p>
+							<div class="number">11</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="col-xs-6 step_clear_right">
+					
+					<div class="step_items_right">
+
+						<div class="step_item left">
+							<h3>Бесплатная консультация главного специалита</h3>
+							<p>Наш главный специалист консультирует Вас бесплатно, и запрашивает исходные данные по объекту для анализа</p>
+							<div class="number">2</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Сбор исходных данных</h3>
+							<p>В случае отсутствия исхлдных данных, мы сами запрашиваем проектную документацию, результаты изысканий у организаций подрядчиков или гос организациях</p>
+							<div class="number">4</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Согласование сроков и стоимости выполнения работ</h3>
+							<p>Мы предоставляем Вам программу обследования, и ориентировочную стоимость наших работ, после чего согласовываем окончательную стоимость и срок выполнения работ</p>
+							<div class="number">6</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Выполнение работ</h3>
+							<p>Выполнение работ производится в соответствии с утвержденным графиком производства работ</p>
+							<div class="number">8</div>
+						</div>
+
+						<div class="step_item left">
+							<h3>Сдача отчета </h3>
+							<p>Передача Вам отчета с результатами обследования, выводами и рекомендациями по объекту </p>
+							<div class="number">10</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<div id="map">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="s_maps">
+						<div class="maps_form">
+							<form id="form3" class="top_form">
+								<h3>остались вопросы?</h3>
+								<p>Задайте их по телефону <strong>+7(812) 309 02 40</strong> или напишите нам </p>
+								<input type="text" required name="name" placeholder="Имя">
+								<input type="tel" id="phone4" required name="phone" placeholder="Телефон">
+								<input type="email" required name="email" placeholder="Email">
+								<textarea name="question" placeholder="Ваш вопрос"></textarea>
+								<div class="but_wr">
+									<button class="button">получить консультацию</button>
+								</div>
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="Универсал Инжиниринг">
+								<input type="hidden" name="admin_email" value="ebortnikov@mail.ru">
+								<input type="hidden" name="form_subject" value='Заявка с вопросом'>
+								<!-- END Hidden Required Fields -->
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="line_menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+
+						<div class="logo_wrap">
+							<img src="img/logo_footer.png" alt="Универсал Инжиниринг">
+						</div>
+
+						<nav class="menu">
+							<ul>
+								<li><a href="#service">Услуги</a></li>
+								<li><a href="#machine">Оборудование</a></li>
+								<li><a href="#advantages">Преимущества</a></li>
+								<li><a href="#step">Схема работы</a></li>
+								<li><a href="#map">Контакты</a></li>
+							</ul>
+						</nav>
+
+						<div class="contact_wrap clearfix">
+							<div class="contact_descr">
+								<span class="tel">+7(812) 309 02 40</span>
+								<span class="email">universaleng@mail.ru</span>
+								<span class="copyr"><a href="http://aida-media.ru/">Разработка сайта</a> AIDA Media</span>
+							</div>
+							<a  href="#form_pop" class="contact_img popup">
+								<i class="ic ic_phone"></i>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>			
+		</div>
+	</footer>
+
+
+	<div class="hidden">
+		
+		<form id="form_pop" class="top_form form_popup">
+			<h3>заказать звонок</h3>
+			<p>и получите консультацию <span>бесплатно</span></p>
+			<input type="text" required name="name" placeholder="Имя">
+			<input type="tel" id="phone5" required name="phone" placeholder="Телефон">
+			<div class="but_wr">
+				<button class="button">получить консультацию</button>
+			</div>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Универсал Инжиниринг">
+			<input type="hidden" name="admin_email" value="ebortnikov@mail.ru">
+			<input type="hidden" name="form_subject" value='Заказ обратного звонка'>
+			<!-- END Hidden Required Fields -->
+		</form>
+
+	</div>
 
 	<div class="loader">
 		<div class="loader_inner"></div>
@@ -312,6 +790,9 @@
 	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/equalHeight/jquery.equalheights.min.js"></script>
 	<script src="libs/retina/retina.min.js"></script>
+	<script src="libs/headhesive/headhesive.js"></script>
+	<script src="libs/maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	
 	<script src="js/common.js"></script>
 	
