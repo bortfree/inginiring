@@ -576,19 +576,21 @@ header
 	text-align: left
 	margin-bottom: 14px
 	&__img
-		display: flex
+		display: inline-block
 		position: relative
 		text-align: center
 		top: 8px
 		width: 100px
 		float: left
 		height: 100px
-		vertical-align: top
+		vertical-align: middle
+		line-height: 100px
 		border-radius: 10em
 		background-color: #01457a
 		background-image: linear-gradient(to top, #01457a 0%, #035ba0 100%)
 		.ic
 			margin: auto
+			top: 17px
 	&__descr
 		display: inline-block
 		margin-left: 18px
@@ -694,7 +696,7 @@ header
 	top: 60px
 	form
 		color: #fff
-		width: 340px
+		width: 350px
 		text-align: center
 		h3
 			font-size: 18px
@@ -705,6 +707,9 @@ header
 			font-family: "clearSansRegular", sans-serif
 			line-height: 18px
 			margin-bottom: 26px
+			span
+				color: #fff
+				font-family: "clearSansBold", sans-serif
 		textarea
 			height: 79px
 			resize: none
@@ -745,5 +750,4 @@ footer
 .mfp-close-btn-in
 	.mfp-close
 		color: #fff
-
 

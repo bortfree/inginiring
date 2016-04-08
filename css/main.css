@@ -683,17 +683,15 @@ header {
   text-align: left;
   margin-bottom: 14px; }
   .item_adv__img {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
     position: relative;
     text-align: center;
     top: 8px;
     width: 100px;
     float: left;
     height: 100px;
-    vertical-align: top;
+    vertical-align: middle;
+    line-height: 100px;
     -webkit-border-radius: 10em;
             border-radius: 10em;
     background-color: #01457a;
@@ -701,7 +699,8 @@ header {
     background-image: -webkit-linear-gradient(bottom, #01457a 0%, #035ba0 100%);
     background-image: linear-gradient(to top, #01457a 0%, #035ba0 100%); }
     .item_adv__img .ic {
-      margin: auto; }
+      margin: auto;
+      top: 17px; }
   .item_adv__descr {
     display: inline-block;
     margin-left: 18px;
@@ -809,7 +808,7 @@ header {
   top: 60px; }
   .s_maps form {
     color: #fff;
-    width: 340px;
+    width: 350px;
     text-align: center; }
     .s_maps form h3 {
       font-size: 18px;
@@ -820,6 +819,9 @@ header {
       font-family: "clearSansRegular", sans-serif;
       line-height: 18px;
       margin-bottom: 26px; }
+      .s_maps form p span {
+        color: #fff;
+        font-family: "clearSansBold", sans-serif; }
     .s_maps form textarea {
       height: 79px;
       resize: none;
